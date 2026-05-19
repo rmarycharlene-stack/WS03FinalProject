@@ -1,14 +1,20 @@
 <?php
-echo "hello";
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
 
+session_start();
+
+require __DIR__ . '/../vendor/autoload.php';
 require '../helpers.php';
 
-require basePath('views/home.view.php');
-loadView('home');
+use Framework\Router;
 
-    $routes = [
-        '/' => 'controllers/home.php',
-        '/listings' => 'controllers/index.php',
-        '/listings/create' => 'controllers/listings/create.php'
-        '/404' => 'controllers/error/404.php'
-    ];
+
+$router = new Router();
+
+$routes = require basePath('routes.php');
+
+$uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+
+
+$router->route($uri);

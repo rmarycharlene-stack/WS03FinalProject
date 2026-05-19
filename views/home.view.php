@@ -1,7 +1,7 @@
-<? = loadPartial('head') ?>
-<? = loadPartial('navbar') ?>
-<? = loadPartial('showcase=search') ?>
-<? = loadPartial('top-banner') ?>
+<?= loadPartials('head') ?>
+<?= loadPartials('navbar') ?>
+<?= loadPartials('showcase=search') ?>
+<?= loadPartials('top-banner') ?>
 
 <!-- Job Listings -->
 <section>
@@ -9,6 +9,7 @@
         <div class="text-center text-3xl mb-4 font-bold border border-gray-300 p-3">Recent Jobs</div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
             <!-- Job Listing 1: Software Engineer -->
+             (?php foreach ($listings as $listing): ?>
             <div class="rounded-lg shadow-md bg-white">
                 <div class="p-4">
                     <h2 class="text-xl font-semibold">Software Engineer</h2>
@@ -35,8 +36,7 @@
                 </div>
             </div>
 
-            <!-- Job Listing 2: Marketing Specialist -->
-            <div class="rounded-lg shadow-md bg-white">
+            <!-- <div class="rounded-lg shadow-md bg-white">
                 <div class="p-4">
                     <h2 class="text-xl font-semibold">Marketing Specialist</h2>
                     <p class="text-gray-700 text-lg mt-2">
@@ -62,7 +62,6 @@
                 </div>
             </div>
 
-            <!-- Job Listing 3: Web Developer -->
             <div class="rounded-lg shadow-md bg-white">
                 <div class="p-4">
                     <h2 class="text-xl font-semibold">Web Developer</h2>
@@ -89,7 +88,6 @@
                 </div>
             </div>
 
-            <!-- Job Listing 4: Data Analyst -->
             <div class="rounded-lg shadow-md bg-white">
                 <div class="p-4">
                     <h2 class="text-xl font-semibold">Data Analyst</h2>
@@ -116,7 +114,6 @@
                 </div>
             </div>
 
-            <!-- Job Listing 5: Graphic Designer -->
             <div class="rounded-lg shadow-md bg-white">
                 <div class="p-4">
                     <h2 class="text-xl font-semibold">Graphic Designer</h2>
@@ -167,7 +164,7 @@
                         Details
                     </a>
                 </div>
-            </div>
+            </div> -->
         </div>
         <a href="listings" class="block text-xl text-center">
             <i class="fa fa-arrow-alt-circle-right"></i>
