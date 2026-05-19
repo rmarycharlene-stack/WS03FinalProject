@@ -10,7 +10,7 @@
           This is a success message.
         </div> -->
         <form method="POST" action="/listings">
-            <h2 class="text-2xl font-bold mb-6 text-center text-gray-500">
+            <h2 class="text-2xl font-bold mb-6 text-center text-black">
                 Job Info
             </h2>
             <?= loadPartials('errors', [
@@ -57,7 +57,7 @@
                     placeholder="Tags"
                     class="w-full px-4 py-2 border rounded focus:outline-none" value="<?= $listing['tags'] ?? ''  ?>" />
             </div>
-            <h2 class="text-2xl font-bold mb-6 text-center text-gray-500">
+            <h2 class="text-2xl font-bold mb-6 text-center text-black">
                 Company Info & Location
             </h2>
             <div class="mb-4">
